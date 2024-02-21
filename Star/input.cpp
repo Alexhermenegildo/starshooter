@@ -25,6 +25,24 @@ void Engine::input()
     else
     {
         m_Tuffy.stopDown();
-    }                       
+    }   
+
+    if (Keyboard::isKeyPressed(Keyboard::A))
+    {
+        m_Tuffy.moveLeft();
+    }
+    else
+    {
+        m_Tuffy.stopLeft();
+    }           
+
+    if (Keyboard::isKeyPressed(Keyboard::D))
+    {
+        m_Tuffy.moveRight();
+    }
+    else
+    {
+        m_Tuffy.stopRight();
+    }         
  
 }

@@ -20,6 +20,8 @@ private:
     // Which direction(s) is the player currently moving in
     bool m_UpPressed;
     bool m_DownPressed;
+    bool m_LeftPressed;
+    bool m_RightPressed;
  
     // Tuffy's speed in pixels per second
     float m_Speed;
@@ -37,12 +39,19 @@ public:
     void moveUp();
  
     void moveDown();
+
+    void moveLeft();
+
+    void moveRight();
  
     // Stop Tuffy moving in a specific direction
     void stopUp();
  
     void stopDown();
  
+    void stopLeft();
+ 
+    void stopRight();
     // We will call this function once every frame
     void update(float elapsedTime);
  
