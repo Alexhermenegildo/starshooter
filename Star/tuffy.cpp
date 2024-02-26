@@ -9,13 +9,15 @@ Tuffy::Tuffy()
  
     m_Position.x = -100; //tuffy's starting position
     m_Position.y = 400;
- 
+  
+
 }
- 
+
 
 Sprite Tuffy::getSprite()
 {
     return m_Sprite;
+    
 }
  
 void Tuffy::moveUp()
@@ -83,5 +85,5 @@ void Tuffy::update(float elapsedTime)
     }
     // Now move the sprite to its new position
     m_Sprite.setPosition(m_Position);   
- 
+    
 }

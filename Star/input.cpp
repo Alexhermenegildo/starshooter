@@ -44,5 +44,13 @@ void Engine::input()
     {
         m_Tuffy.stopRight();
     }         
- 
+    
+    if (Keyboard::isKeyPressed(Keyboard::Space))
+    {
+        
+    }
+    else 
+    {
+
+    }         
 }

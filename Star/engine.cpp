@@ -49,6 +49,7 @@ void Engine::draw()
     m_Window.draw(m_BackgroundSprite);
     m_Window.draw(m_Tuffy.getSprite());
 
+
     // Show everything we have just drawn
     m_Window.display();
 }
