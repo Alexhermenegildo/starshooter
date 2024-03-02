@@ -1,33 +1,21 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "tuffy.h"
- 
+
 using namespace sf;
- 
+
 class Engine
 {
 private:
- 
-    // A regular RenderWindow
-    RenderWindow m_Window;  
- 
-    // Declare a sprite and a Texture for the background
+    RenderWindow m_Window;
     Sprite m_BackgroundSprite;
     Texture m_BackgroundTexture;
- 
-    // An instance of Tuffy
     Tuffy m_Tuffy;
- 
-    // Private functions for internal use only
+
+public:
+    Engine();
+    void start();
     void input();
     void update(float dtAsSeconds);
     void draw();
- 
-public:
-    // The Engine constructor
-    Engine();
- 
-    // start will call all the private functions
-    void start();
- 
 };
