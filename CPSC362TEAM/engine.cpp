@@ -1,14 +1,11 @@
 #include "engine.h"
 
-Engine::Engine()
-{
-    Vector2f resolution;
-    resolution.x = VideoMode::getDesktopMode().width;
-    resolution.y = VideoMode::getDesktopMode().height;
+#include "engine.h"
 
-    m_Window.create(VideoMode(resolution.x, resolution.y),
-        "Tuffy Star Shooter",
-        Style::Fullscreen);
+Engine::Engine(sf::RenderWindow& window) : m_Window(window) {
+    sf::Vector2f resolution;
+    resolution.x = sf::VideoMode::getDesktopMode().width;
+    resolution.y = sf::VideoMode::getDesktopMode().height;
 
     m_BackgroundTexture.loadFromFile("starbackground.png");
     m_BackgroundSprite.setTexture(m_BackgroundTexture);

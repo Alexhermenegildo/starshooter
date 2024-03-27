@@ -1,21 +1,20 @@
+// engine.h
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "tuffy.h"
 #include "enemy.h"
 
-using namespace sf;
-
 class Engine
 {
 private:
-    RenderWindow m_Window;
-    Sprite m_BackgroundSprite;
-    Texture m_BackgroundTexture;
+    sf::RenderWindow& m_Window; // Reference to the game window
+    sf::Sprite m_BackgroundSprite;
+    sf::Texture m_BackgroundTexture;
     Tuffy m_Tuffy;
     Enemy m_Enemy;
 
 public:
-    Engine();
+    Engine(sf::RenderWindow& window); // Constructor accepting a window parameter
     void start();
     void input();
     void update(float dtAsSeconds);

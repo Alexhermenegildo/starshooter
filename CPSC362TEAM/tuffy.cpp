@@ -84,12 +84,7 @@ void Tuffy::update(float elapsedTime)
         bullet.move(m_Speed * elapsedTime, 0); // Adjust bullet speed as needed
     }
 
-    // Remove bullets that are out of bounds
-    bullets.erase(std::remove_if(bullets.begin(), bullets.end(),
-                    [](const CircleShape& bullet) {
-                        return bullet.getPosition().y > 1000; // Adjust the limit based on your window width
-                    }),
-                    bullets.end());
+
 }
 
 void Tuffy::shoot()
